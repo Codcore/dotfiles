@@ -28,6 +28,7 @@ Plugin 'airblade/vim-gitgutter'
 " ==== Rails and Ruby support for vim
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-bundler'
 "Plugin 'thoughtbot/vim-rspec'
 
 " ==== Commenting and uncommenting (use 'gc')
@@ -41,6 +42,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'morhetz/gruvbox'
+Plugin 'reedes/vim-colors-pencil'
+Plugin 'NLKNguyen/papercolor-theme'
 
 " ==== Syntax helpers 
 Plugin 'tpope/vim-surround'
@@ -98,13 +101,19 @@ augroup END
 
 syntax enable
 
-" Configs to make Molokai look great
-set background=dark
-let g:molokai_original=1
-let g:rehash256=1
 set t_Co=256
-colorscheme molokai 
+set background=light
+colorscheme PaperColor 
+let allow_italic=1 
 
+" Configs to make Molokai look great
+" set background=dark
+" let g:molokai_original=1
+" let g:rehash256=1
+" set t_Co=256
+" " colorscheme molokai 
+" colorscheme molokai 
+"
 " Show trailing whitespace and spaces before a tab:
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\\t/
@@ -214,7 +223,9 @@ else
   let test#strategy = "dispatch"
 endif
 
+" ==== Airline config
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'pencil'
 
 " ==== Syntastic config
 set statusline+=%#warningmsg#

@@ -97,3 +97,5 @@ source $ZSH/oh-my-zsh.sh
 # eval "$(rbenv init -)"
 
 source $HOME/.rvm/scripts/rvm
+source ~/.tmuxinator.zsh
+alias txs=tmuxinator start
